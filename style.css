@@ -1,0 +1,23 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+body{
+    font-size: 10vw;
+    font-family: 'Goldman', cursive;
+    text-align: center;
+    text-decoration: wavy;
+    position: absolute;
+    top: 250px;
+    left: 450px;
+    color: aliceblue;
+    background-color: black;
+
+}
+
+.time{
+    font-size: 5vw;
+}
+
+#day{
+    font-size: 3vw;
+}

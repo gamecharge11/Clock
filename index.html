@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+
+  
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  
+
+  var t = setTimeout(startTime, 500);
+  var d = new Date();
+
+
+
+  var date = d.getDate();
+var month = d.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
+var year = d.getFullYear();
+    
+var dateStr = date + "/" + month + "/" + year;
+document.getElementById('day').innerHTML = dateStr;
+var d = new Date();
+    
+
+
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+
+
+</script>
+</head>
+<body onload="startTime()">
+<div id="txt"></div>
+<div id="day"></div>
+</body>
+</html>
